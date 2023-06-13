@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
 
 <!DOCTYPE html>
 <html>
@@ -18,14 +18,20 @@
     #main {margin-left: 120px}
     /* Remove margins from "page content" on small screens */
     @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+        .auto-style1 {
+            width: 36%;
+            height: 52px;
+        }
     </style>
   </head>
 <body class="w3-black">
 
+    <form id="form1" runat="server">
+
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img src="D:\Desktop\photo.jpg" style="width:100%">
+  <img src="1.jpg" class="auto-style1">
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
@@ -46,7 +52,7 @@
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+  <div class="1.jpg">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
     <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
@@ -60,7 +66,7 @@
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Amro Alzahar.</h1>
     <p>IT student and Web Designer.</p>
-    <img src="https://www.w3schools.com/w3images/man_smoke.jpg" alt="boy" class="w3-image" width="992" height="1108">
+    <img src="1.jpg" alt="boy" class="w3-image" width="992" height="1108">
   </header>
 
   <!-- About Section -->
@@ -133,66 +139,16 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
       <i class="fa fa-download"></i> Download Resume
     </button>
     
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    <!-- End Grid/Pricing tables -->
-    </div>
     
-    <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
-    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
-    <p>John Doe saved us from a web disaster.</p><br>
-    
-    <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
-    <p>No one is better than John Doe.</p>
-  <!-- End About Section -->
-  </div>
-  
   <!-- Portfolio Section -->
   <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">IOT</h2>
+    <h2 class="w3-text-light-grey" id="IOT">IOT And Cyber Security Course</h2>
     <hr style="width:200px" class="w3-opacity">
 
     <!-- Grid for photos -->
-    <section id="IOT">
+    <section >
     <h2>Introduction to IoT and Cybersecurity</h2>
-    <div>
+    <div style="color:lightgray">
         <p>
             The Internet of Things (IoT) is a revolutionary concept that refers to the network of physical devices, vehicles, appliances, and other objects embedded with sensors, software, and connectivity. These devices can collect and exchange data, enabling them to interact and make intelligent decisions without human intervention.
         </p>
@@ -213,10 +169,12 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
         </p>
     </div>
 </section>
+          
 <section id="lab1">
-    <h2>Lab One</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab One</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             Understanding the key concepts of Confidentiality, Integrity, and Availability (CIA) is crucial in the field of cybersecurity. Confidentiality ensures that sensitive information is only accessed by authorized individuals, preventing unauthorized disclosure. Integrity ensures that data remains accurate and unaltered, safeguarding against unauthorized modification. Availability ensures that systems and data are accessible when needed, minimizing disruptions and ensuring business continuity. These three pillars form the foundation of a robust cybersecurity strategy.
         </p>
@@ -227,11 +185,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             In addition to technical competencies, awareness of ethical and governance frameworks is crucial in information systems security. Adhering to ethical principles ensures responsible and accountable behavior, promoting trust and integrity in handling sensitive data. Knowledge of data protection acts and regulations, such as GDPR (General Data Protection Regulation), helps in establishing compliant and secure information systems. Understanding the ethical and governance frameworks surrounding cybersecurity enables professionals to navigate legal and ethical challenges while protecting data and privacy.
         </p>
     </div>
+        </details>
 </section>
 <section id="lab2">
-    <h2>Lab Two</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab Two</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             In Lab Two, we focused on developing an awareness of the implications of security breaches. We examined the potential consequences and impact of security incidents, including data breaches, unauthorized access, and system compromises. Understanding the implications of security breaches is vital in establishing robust cybersecurity measures.
         </p>
@@ -248,11 +208,14 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Lastly, we focused on developing an awareness of emerging trends in cybersecurity. We explored recent advancements in technologies, such as artificial intelligence (AI), blockchain, and cloud security, and their implications for cybersecurity. Staying informed about emerging trends is crucial in adapting our security strategies to address new challenges and evolving threats.
         </p>
     </div>
+        </details>
 </section>
+      
 <section id="lab3">
-    <h2>Lab Three</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab Three</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             In Lab Three, our focus was on developing solutions that efficiently identify vulnerabilities and threats in software and over networks. We explored various techniques such as vulnerability scanning, penetration testing, code review, and network monitoring to proactively identify potential weaknesses and security risks. By implementing these solutions, we can strengthen the security posture of software and networks, reducing the chances of successful attacks and data breaches.
         </p>
@@ -263,11 +226,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Furthermore, we focused on developing the capacity to predict security issues in software and develop appropriate solutions to deal with them. We delved into techniques such as security testing, risk assessment, and security audits to proactively identify potential vulnerabilities. By anticipating security issues, we can mitigate them before they are exploited. We also learned to apply suitable solutions, such as patch management, secure coding practices, and system hardening, to address identified security vulnerabilities effectively.
         </p>
     </div>
+        </details>
 </section>
 <section id="lab4">
-    <h2>Lab Four</h2>
+    <details>
+   <summary style="font-size:xx-large; color:white">Lab Four</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             In Lab Four, our focus was on selecting and explaining the appropriate assessment regime based on the type and size of the target business. We explored different assessment methodologies, such as vulnerability assessments, penetration testing, and security audits, and discussed their suitability for different scenarios. By considering the specific characteristics and requirements of the target business, we can tailor the assessment regime to effectively identify and address security vulnerabilities.
         </p>
@@ -278,11 +243,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Moreover, we analyzed the scanning results obtained from the vulnerability tests and scans. We learned how to interpret the findings and prioritize the identified vulnerabilities based on their severity and potential impact. Through careful analysis, we were able to make informed recommendations to mitigate the vulnerabilities, including implementing patches, updating software versions, enhancing access controls, or applying additional security measures.
         </p>
     </div>
+        </details>
 </section>
 <section id="lab5">
-    <h2>Lab Five</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab Five</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             In Lab Five, we delved into the fascinating world of the Internet of Things (IoT) and its expected global growth. The IoT refers to the network of interconnected devices and objects that can communicate and exchange data with each other via the internet. This technology has the potential to revolutionize various industries and domains, including healthcare, transportation, agriculture, manufacturing, and smart homes.
         </p>
@@ -293,11 +260,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Additionally, we examined the expected global growth of IoT. The proliferation of connected devices and the increasing adoption of IoT technologies across industries have led to exponential growth projections. By understanding the scale and potential impact of IoT, we can prepare ourselves to harness its benefits and overcome the associated challenges.
         </p>
     </div>
+        </details>
 </section>
 <section id="lab6">
-    <h2>Lab Six</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab Six</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             In Lab Six, we explored the human interaction with IoT devices and wearable sensors, as well as the IoT infrastructure. We examined how users interact with IoT devices, including mobile apps, web interfaces, voice commands, and gesture-based controls. We discussed the importance of designing intuitive and user-friendly interfaces to enhance the user experience and maximize the benefits of IoT technology.
         </p>
@@ -308,11 +277,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Furthermore, we examined the business challenges, technical challenges, and security challenges associated with IoT. From a business perspective, we discussed aspects such as scalability, interoperability, data management, and monetization strategies. From a technical standpoint, we explored issues related to connectivity, data processing, edge computing, and system integration. We also emphasized the criticality of addressing security challenges, including device authentication, data encryption, access control, and privacy protection, to ensure the integrity and trustworthiness of IoT systems.
         </p>
     </div>
+        </details>
 </section>
 <section id="lab7">
-    <h2>Lab Seven</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab Seven</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             Lab Seven provided an introduction to physical computing and IoT, focusing on the background and principles behind these technologies. We explored the intersection of hardware and software, enabling devices to interact with the physical world and exchange data over the internet. We discussed the fundamental concepts of physical computing, such as sensors, actuators, and communication protocols, and their role in IoT applications.
         </p>
@@ -326,11 +297,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Lastly, we undertook an IoT project, applying the knowledge and skills acquired throughout the lab. We had the opportunity to design and implement an IoT system, integrating sensors, actuators, and microcontrollers to solve a specific problem or address a real-world scenario. This hands-on experience provided us with valuable insights into the practical aspects of building and deploying IoT solutions.
         </p>
     </div>
+        </details>
 </section>
 <section id="lab8">
-    <h2>Lab Eight</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab Eight</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             Lab Eight focused on the convergence of advances in robotics and IoT fields over the years. We explored how these two fields have come together, creating new possibilities and opportunities. By understanding the applications, challenges, and opportunities within robotics and IoT, we gained insights into the transformative potential of combining these technologies.
         </p>
@@ -341,11 +314,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Furthermore, we briefly discussed the robot operating systems available in the market, such as ROS (Robot Operating System) and various proprietary systems. We explored the capabilities and features of these operating systems in enabling communication, control, and coordination of robotic devices in IoRT scenarios. Additionally, we explored potential applications of IoRT, including autonomous drones, industrial automation, healthcare robotics, and smart home assistants, highlighting the wide range of possibilities that emerge from the convergence of robotics and IoT technologies.
         </p>
     </div>
+        </details>
 </section>
 <section id="lab9">
-    <h2>Lab Nine</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Lab Nine</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <p>
             Lab Nine focused on ambient, embedded, and wearable interaction methods with IoT devices and sensors. We explored different ways of interacting with IoT devices beyond traditional interfaces, such as screens and keyboards, to enable more seamless and intuitive experiences.
         </p>
@@ -362,11 +337,13 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             Lastly, we explored various IoT platforms and applications that facilitate the development and deployment of IoT solutions. We discussed popular platforms like AWS IoT, Google Cloud IoT, and Microsoft Azure IoT, which offer tools and services for managing devices, collecting data, and building IoT applications. We also examined real-world applications of IoT across industries, including smart homes, smart cities, industrial automation, and healthcare, to understand the breadth of possibilities enabled by IoT technologies.
         </p>
     </div>
+        </details>
 </section>
 <section id="seminar">
-    <h2>Seminars</h2>
+    <details>
+    <summary style="font-size:xx-large; color:white">Seminars</summary>
     <hr>
-    <div>
+    <div style="color:lightgray">
         <h3>Arduino: Empowering Innovation through Electronics</h3>
         <p>
             In this seminar, we will explore the fascinating world of Arduino and its applications in empowering innovation through electronics. Arduino is an open-source electronics platform that allows users to create interactive projects and prototypes by combining hardware and software. During this seminar, we will cover the following topics:
@@ -382,9 +359,35 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
             <li>Real-world applications of Arduino in various domains</li>
         </ul>
         <p>
+            <asp:Image ID="Image1" runat="server" Height="314px" ImageUrl="2.jpg" Width="234px" />
+            <asp:Image ID="Image13" runat="server" Height="315px" ImageUrl="3.jpg" Width="235px" />
+        </p>
+        <p>
+            <asp:Image ID="Image2" runat="server" Height="314px" ImageUrl="4.jpg" Width="234px" />
+            <asp:Image ID="Image18" runat="server" Height="314px" ImageUrl="5.jpg" Width="234px" />
+        </p>
+        <p>
+            <asp:Image ID="Image3" runat="server" Height="314px" ImageUrl="6.jpg" Width="234px" />
+            <asp:Image ID="Image17" runat="server" Height="314px" ImageUrl="7.jpg" Width="234px" />
+        </p>
+        <p>
+            <asp:Image ID="Image4" runat="server" Height="314px" ImageUrl="8.jpg" Width="234px" />
+            <asp:Image ID="Image16" runat="server" Height="314px" ImageUrl="9.jpg" Width="234px" />
+        </p>
+        <p>
+            <asp:Image ID="Image5" runat="server" Height="314px" ImageUrl="10.jpg" Width="234px" />
+            <asp:Image ID="Image15" runat="server" Height="314px" ImageUrl="11.jpg" Width="234px" />
+        </p>
+        <p>
+            <asp:Image ID="Image6" runat="server" ImageUrl="12.jpg" Width="468px" />
+        </p>
+        <p>
+            hey</p>
+        <p>
             Whether you're a beginner or have some prior experience with electronics and programming, this seminar will provide you with valuable insights into the limitless possibilities of Arduino. Join us to discover how Arduino can ignite your creativity and enable you to bring your ideas to life!
         </p>
     </div>
+        </details>
 </section>
     <!-- End photo grid -->
     </div>
@@ -397,13 +400,12 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
     <hr style="width:200px" class="w3-opacity">
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 5 Yesim appartment Tekan Area, Famagusta, TRNC</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> <a href="tel:+90 533 844 2914">Phone: +90 533 844 2914</a></p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a href="mailto:amroessam68@gmail.com">Email: amroessam68@gmail.com</a></p>
     </div><br>
     <p>Let's get in touch. Send me a message:</p>
 
-    <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
@@ -413,7 +415,6 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
-    </form>
   <!-- End Contact Section -->
   </div>
   
@@ -432,6 +433,8 @@ Thank you for taking the time to visit my ePortfolio. Feel free to browse throug
 
 <!-- END PAGE CONTENT -->
 </div>
+
+    </form>
 
 </body>
 </html>
